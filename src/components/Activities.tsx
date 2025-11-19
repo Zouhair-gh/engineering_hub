@@ -33,6 +33,25 @@ export default function Activities() {
               </div>
             </div>
           </div>
+          <div className="fade-in-section mt-8">
+            <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl shadow-lg p-8 md:p-10 border-l-4 border-brand">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
+                <div className="flex-1">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Team Leader — AIESEC Marrakech</h3>
+                  <p className="text-gray-600 text-lg">AIESEC Marrakech</p>
+                </div>
+                <div className="mt-4 md:mt-0">
+                  <span className="inline-block bg-brand text-white px-4 py-2 rounded-full text-sm font-semibold">2021 - 2023</span>
+                </div>
+              </div>
+
+              <div className="border-t border-gray-200 pt-6">
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  Suivi des échanges sortants et gestion des relations internationales.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

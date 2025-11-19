@@ -1,59 +1,44 @@
 export default function Hero() {
+  const profileImage = new URL('../assets/profile.png', import.meta.url).href;
+  const resumeUrl = '/GHAOURI-ZOUHAIR.pdf';
   return (
-    <section
-      id="hero"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 text-white pt-20"
-    >
-      <div className="container mx-auto px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            GHAOURI ZOUHAIR
-          </h1>
-          <h2 className="text-2xl md:text-3xl font-light mb-8 text-blue-200">
-            Futur ingénieur en développement Full-Stack & QA
-          </h2>
-          <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-200 max-w-3xl mx-auto">
-            Étudiant ingénieur en informatique, passionné par les tests logiciels et le développement web.
-            Fort d'une solide formation à l'EMSI Marrakech et de compétences techniques en technologies
-            full-stack et en assurance qualité, actuellement à la recherche d'une opportunité de projet
-            de fin d'études (PFE) d'une durée de 4 à 5 mois, à partir de février 2026.
-          </p>
+    <section id="hero" className="page-section bg-white pt-24">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div className="md:col-span-7">
+            <div className="fade-in-section">
+              <h1 className="section-title font-extrabold">Ghaouri Zouhair</h1>
+              <p className="text-lg text-slate-700 mt-3 max-w-2xl">
+                Ingénieur en informatique — spécialisé en développement Full-Stack et assurance qualité logicielle.
+                Actuellement en recherche d'un projet de fin d'études (PFE) de 4–5 mois à partir de février 2026.
+              </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <div className="text-center">
-              <p className="text-sm text-blue-300 font-semibold mb-1">LOCALISATION</p>
-              <p className="text-lg">Marrakech, Maroc</p>
-            </div>
-            <div className="hidden sm:block w-px h-12 bg-blue-400"></div>
-            <div className="text-center">
-              <p className="text-sm text-blue-300 font-semibold mb-1">MOBILITÉ</p>
-              <p className="text-lg">Nationale et internationale</p>
+              <div className="mt-6 flex flex-wrap gap-3 items-center">
+                <a href={resumeUrl} download className="btn-primary">Télécharger le CV</a>
+                <a href="mailto:zouhairghaouri@gmail.com" className="px-4 py-2 rounded-md border border-slate-200 text-slate-700 font-medium">Contact</a>
+                <a href="https://github.com/Zouhair-gh" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md text-slate-700 border border-slate-100 hover:shadow-sm">GitHub</a>
+              </div>
+
+              <div className="mt-8 flex gap-6 items-center text-sm text-slate-600">
+                <div>
+                  <div className="font-semibold text-slate-800">Localisation</div>
+                  <div>Marrakech, Maroc</div>
+                </div>
+                <div className="h-8 w-px bg-slate-200"></div>
+                <div>
+                  <div className="font-semibold text-slate-800">Mobilité</div>
+                  <div>Nationale & internationale</div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4 justify-center">
-            <a
-              href="mailto:zouhairghaouri@gmail.com"
-              className="btn-primary bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50"
-            >
-              Me Contacter
-            </a>
-            <a
-              href="https://github.com/Zouhair-gh"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://zouhair-gh.github.io/Portfolio/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900"
-            >
-              Portfolio Actuel
-            </a>
+          <div className="md:col-span-5 flex justify-center md:justify-end">
+            <div className="fade-in-section">
+              <div className="profile-portrait">
+                <img src={profileImage} alt="Portrait de Zouhair Ghaouri" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

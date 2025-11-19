@@ -247,38 +247,34 @@ export default function Projects() {
 
           {/* Client Projects Section */}
           <div className="fade-in-section">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">
-              Projets Clients en Production
-            </h2>
-            <div className="w-20 h-1 bg-blue-900 mx-auto mb-16"></div>
+            <h2 className="section-title text-center">Projets Clients en Production</h2>
+            <div className="section-subtle-line"></div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               {clientProjects.map((project, idx) => (
-                <div
+                <a
                   key={idx}
-                  className="fade-in-section bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all border-t-4 border-green-600"
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="fade-in-section block bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border-l-4 border-brand overflow-hidden"
                 >
-                  <div className="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold mb-4">
-                    EN PRODUCTION
+                  <div className="p-6 h-full flex flex-col justify-between">
+                    <div>
+                      <div className="inline-block px-3 py-1 bg-[rgba(184,143,42,0.12)] text-[var(--brand)] rounded-full text-xs font-semibold mb-4">
+                        EN PRODUCTION
+                      </div>
+
+                      <h3 className="text-2xl font-semibold text-slate-900 mb-2">{project.title}</h3>
+                      <p className="text-slate-600 mb-4 leading-relaxed">{project.description}</p>
+                    </div>
+
+                    <div className="mt-4 flex items-center justify-between">
+                      <span className="text-sm text-slate-700 font-medium">Type: <span className="text-slate-900 font-semibold">{project.type}</span></span>
+                      <span className="text-sm text-brand-muted">Visiter →</span>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  <p className="text-sm text-gray-700 font-semibold mb-4">
-                    Type : <span className="text-blue-900">{project.type}</span>
-                  </p>
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-4 py-2 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
-                  >
-                    Visiter le site
-                  </a>
-                </div>
+                </a>
               ))}
             </div>
           </div>
