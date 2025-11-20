@@ -140,7 +140,7 @@ export default function Contact() {
                 <form onSubmit={handleSubmitWhatsApp} className="space-y-4">
                   <div>
                     <label className="block text-sm font-semibold text-blue-200 mb-2">
-                      Votre nom
+                      Votre Nom
                     </label>
                     <input
                       type="text"
